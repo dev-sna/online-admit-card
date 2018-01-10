@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- <meta charset="UTF-8"> -->
+	<title><%=identity%></title>
+
+<style>
+body {
+  background: rgb(255,255,255);
+  height: 296.5mm;
+  width: 210mm;
+  margin: auto;
+}
+.right{
+	float: right;
+	margin-top: 15mm;
+	margin-right: 15mm;
+	width: 40mm;
+	height: 6mm;
+	border: 0.5mm solid #000; 
+	padding-left: 1mm;
+}
+.left{
+	float: left;
+	margin-top: 15mm;
+	margin-left: 12mm;
+	width: 40mm;
+	height: 6mm;
+	border: 0.5mm solid #000;
+	text-align: left; 
+	padding-left: 1mm;
+}
+.mid{
+	float: left;
+	margin-top: 15mm;
+	margin-left: 30mm;
+	width: 40mm;
+	height: 6mm;
+	border: 0.5mm solid #000;
+	text-align: left; 
+	padding-left: 1mm;
+}
+.bar1{
+	align-content: center;
+	margin-top: 15mm;
+	margin-left: 12mm;
+	width: 182mm;
+	height:7mm;
+	border:0.5mm solid #000;
+}
+.bar2{
+	align-content: center;
+	margin-top: 2mm;
+	margin-left: 12mm;
+	width: 182mm;
+	height: 7mm;
+	border: 0.5mm solid #000;
+}
+.box{
+	align-content: center;
+	margin-top: 2.5mm;
+	margin-left: 12mm;
+	width: 182mm;
+	height:35mm;
+	border:0.5mm solid #000;
+
+}
+.box.div{
+	clear: both;
+}
+#box1{
+	align-content: center;
+	margin-left: 155mm;
+	margin-top: -32mm;
+	width: 26mm;
+	height: 28mm;
+	border:0.5mm solid #000;
+}
+
+#box2{
+	align-content: center;
+	margin-top: 7mm;
+	margin-left: 12mm;
+	width: 183mm;
+	height:39mm;
+}
+table{
+	border-collapse: collapse;
+	width: 100%;
+	table-layout: fixed;
+}
+p{
+	margin-top: 1mm;
+	margin-bottom: 1mm;
+}
+.bar1left {
+    float: left;
+    padding-left: 0mm;
+}
+.bar2left {
+    float: left;
+    padding-left: -10mm;
+}
+.bar1right{
+	float: right;
+	padding-right: 70mm;
+}
+.bar2right{
+	float: right;
+	padding-right: 85mm;
+}
+#sign1{
+	float: left;
+	margin-left: 15mm;
+	margin-top: 5mm;
+	width: 36mm;
+	border-top:0.5mm solid #000;	
+}
+
+#sign2{
+	float: right;
+	margin-right: 18mm;
+	margin-top: 5mm;
+	width: 36mm;
+	border-top:0.5mm solid #000;	
+}
+
+</style>
+</head>
+<body>
+
+		<div class="left"> Form #:&nbsp;&nbsp;<%= id%></div>
+		<div class="mid"> Exam:&nbsp;&nbsp;<%= exam_type%></div>
+
+		<div class="right"> Roll #:&nbsp;&nbsp;<%= identity%></div><br><br>	
+
+			<div class="bar1">
+				<p class="bar1left">&nbsp;&nbsp;Batch:  &nbsp;&nbsp;&nbsp;&nbsp;      <%= batch %></p>
+				<p class="bar1right">Enrollment #:&nbsp;&nbsp;&nbsp;&nbsp;<%= enroll %></p>
+				<div style="clear: both;"></div>
+			</div>
+
+			<div class="bar2">
+				<p class="bar2left">&nbsp;&nbsp;Semester:&nbsp;&nbsp;&nbsp;&nbsp;<%= semester%></p>
+				<p class="bar2right">Year:&nbsp;&nbsp;&nbsp;&nbsp;<%= study_year %></p>
+				<div style="clear: both;"></div>
+			</div>	
+
+			<div class="box">
+				<p>&nbsp;&nbsp;Name:&nbsp;&nbsp;&nbsp;&nbsp; <%= name %></p>
+					<div style="clear: both;" ></div>
+				<p>&nbsp;&nbsp;Father's Name:&nbsp;&nbsp;&nbsp;&nbsp; <%= father_name %></p>
+					<div style="clear: both;"></div>
+				<p>&nbsp;&nbsp;Department:&nbsp;&nbsp;&nbsp;&nbsp;<%= department %></p>
+					<div style="clear: both;"></div>
+				<p>&nbsp;&nbsp;Address:&nbsp;&nbsp;&nbsp;&nbsp;<%= pre_address %></p>
+					<div style="clear: both;"></div>
+				<p>&nbsp;&nbsp;Nationality:&nbsp;&nbsp;&nbsp;&nbsp;<%= nationality%></p>
+					<div style="clear: both;"></div>
+			</div>	
+            
+			<div id="box1">
+				<img src="file:///C:/online-admit-card/public/images/<%= identity%>.jpeg" style="height: 28mm; width: 26mm;">
+			</div>
+		
+			<div id="box2">
+				<table border="2" >
+					<th colspan="4">Subjects</th><th>(Th)</th><th>(Pr)</th><th colspan="4">Subjects</th><th>(Th)</th><th>(Pr)</th>
+						<tr>
+							<td colspan="4"><%= sub_one%></td>
+							<td><%= sub_one_th%></td>
+							<td><%= sub_one_pr%></td>
+							<td colspan="4"><%= sub_two%></td>
+							<td><%= sub_two_th%></td>
+							<td><%= sub_two_pr%></td>
+						</tr>	
+						<tr>
+							<td colspan="4"><%= sub_three%></td>
+							<td><%= sub_three_th%></td>
+							<td><%= sub_three_pr%></td>
+							<td colspan="4"><%= sub_four%></td>
+							<td><%= sub_four_th%></td>
+							<td><%= sub_four_pr%></td>
+						</tr>	
+
+						<tr>
+							<td colspan="4"><%= sub_five%></td>
+							<td><%= sub_five_th%></td>
+							<td><%= sub_five_pr%></td>
+							<td colspan="4"><%= sub_six%></td>
+							<td><%= sub_six_th%></td>
+							<td><%= sub_six_pr%></td>
+						</tr>	
+
+						<tr>
+							<td colspan="4"></td>
+							<td></td>
+							<td></td>
+							<td colspan="4"></td>
+							<td></td>
+							<td></td>
+						</tr>		
+			</table>
+			</div>	
+<div id="sign1">
+	<p>Controller's Signature</p>
+</div>
+
+<div id="sign2">
+	<p>Chairman's Signature</p>
+</div>
+		
+			
+
+	
+</body>
+</html>
